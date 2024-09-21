@@ -50,7 +50,7 @@ app = Flask(__name__)
 # Rota GET para obter os dados do banco de dados
 @app.route('/get-data', methods=['GET'])
 def get_data():
-    query = "SELECT * FROM dashboard 10"  # Substitua 'nome_da_tabela' pela tabela correta
+    query = "SELECT * FROM dashboard LIMIT 10"  # Substitua 'nome_da_tabela' pela tabela correta
     data = fetch_data(query)
     
     if data:

@@ -2,6 +2,7 @@ import mysql.connector
 import pandas as pd
 import os
 from flask import Flask, jsonify
+from flask_cors import CORS
 from dotenv import load_dotenv
 
 # Carregar as variáveis de ambiente do arquivo .env
@@ -46,6 +47,8 @@ def fetch_data(query):
 
 # Inicializar a aplicação Flask
 app = Flask(__name__)
+CORS(app)
+
 
 # Rota GET para obter os dados do banco de dados
 @app.route('/get-data', methods=['GET'])

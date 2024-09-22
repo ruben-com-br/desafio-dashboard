@@ -47,7 +47,8 @@ def fetch_data(query):
 
 # Inicializar a aplicação Flask
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:5173'])
+
 
 
 # Rota GET para obter os dados do banco de dados

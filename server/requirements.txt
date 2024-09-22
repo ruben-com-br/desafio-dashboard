@@ -3,4 +3,4 @@ Gunicorn
 mysql-connector-python
 python-dotenv
 pandas
-Cors
+flask_cors

@@ -65,7 +65,7 @@ def get_data():
 
 # Rota GET para obter os dados do banco de dados
 @app.route('/get-count', methods=['GET'])
-def get_data():
+def get_count():
     query = "SELECT * FROM contas LIMIT 10"  # Substitua 'nome_da_tabela' pela tabela correta
     data = fetch_data(query)
     

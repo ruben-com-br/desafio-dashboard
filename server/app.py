@@ -62,6 +62,18 @@ def get_data():
     else:
         return jsonify({"error": "Nenhum dado encontrado"}), 404
 
+
+# Rota GET para obter os dados do banco de dados
+@app.route('/get-count', methods=['GET'])
+def get_data():
+    query = "SELECT * FROM contas LIMIT 10"  # Substitua 'nome_da_tabela' pela tabela correta
+    data = fetch_data(query)
+    
+    if data:
+        return jsonify(data), 200  # Retorna os dados como JSON
+    else:
+        return jsonify({"error": "Nenhum dado encontrado"}), 404
+
 # Rodar a aplicação Flask
 if __name__ == '__main__':
     app.run(debug=True)
